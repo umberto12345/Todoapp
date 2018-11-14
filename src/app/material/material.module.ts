@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 import {CdkTableModule} from '@angular/cdk/table';
+import {CdkTreeModule} from '@angular/cdk/tree';
+import {NgModule} from '@angular/core';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -40,25 +39,13 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
-
 } from '@angular/material';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    MatNativeDateModule,
-    ReactiveFormsModule,
-
-
-  ],
-  declarations: [],
   exports: [
-    ReactiveFormsModule,
-    FormsModule,
     CdkTableModule,
+    CdkTreeModule,
+    DragDropModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -94,7 +81,12 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    ScrollingModule,
   ]
-
 })
-export class MaterialModule { }
+export class MaterialModule {}
+
+
+/**  Copyright 2018 Google Inc. All Rights Reserved.
+ Use of this source code is governed by an MIT-style license that
+ can be found in the LICENSE file at http://angular.io/license */
